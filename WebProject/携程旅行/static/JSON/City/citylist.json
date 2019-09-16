@@ -1,0 +1,365 @@
+{
+  "list": [
+    {"title":"历史",
+      "citylist": [
+        {
+          "region": "上海"
+        },
+        {
+          "region": "北京"
+        },
+        {
+          "region": "华中"
+        }
+      ]
+    },
+    {"title":"热门城市",
+      "citylist": [
+        {"region": "上海"}, {"region": "北京"}, {"region": "华中"},
+        {"region": "上海"},  {"region": "北京"},{"region": "华中"},
+        {"region": "上海"}, {"region": "北京"}, {"region": "华中"},
+        {"region": "上海"},  {"region": "北京"},{"region": "华中"}
+      ]
+    },
+    {
+      "title": "A",
+      "citylist": [
+        {
+          "region": "华东"
+        },
+        {
+          "region": "华东"
+        },
+        {
+          "region": "华中"
+        },
+        {
+          "region": "华北"
+        },
+        {
+          "region": "华中"
+        }
+      ]
+    },
+    {
+      "title": "B",
+      "citylist": [
+        {
+          "region": "华中"
+        },
+        {
+          "region": "西北"
+        },
+        {
+          "region": "东北"
+        },
+        {
+          "region": "华北"
+        },
+        {
+          "region": "华北"
+        },
+        {
+          "region": "西南"
+        },
+        {
+          "region": "华北"
+        }
+      ]
+    },
+    {
+      "title": "C",
+      "citylist": [
+        {
+          "region": "华南"
+        },
+        {
+          "region": "华南"
+        },
+        {
+          "region": "华中"
+        },
+        {
+          "region": "华南"
+        },
+        {
+          "region": "华东"
+        },
+        {
+          "region": "华中"
+        },
+        {
+          "region": "华东"
+        },
+        {
+          "region": "华北"
+        },
+        {
+          "region": "华南"
+        }
+      ]
+    },
+    {
+      "title": "D",
+      "citylist": [
+        {
+          "region": "华北"
+        },
+        {
+          "region": "华北"
+        },
+        {
+          "region": "华南"
+        },
+        {
+          "region": "华东"
+        },
+        {
+          "region": "华南"
+        },
+        {
+          "region": "西北"
+        },
+        {
+          "region": "西南"
+        }
+      ]
+    },
+    {
+      "title": "E",
+      "citylist": [
+        {
+          "region": "东北"
+        },
+        {
+          "region": "华中"
+        },
+        {
+          "region": "华中"
+        },
+        {
+          "region": "西北"
+        },
+        {
+          "region": "华北"
+        },
+        {
+          "region": "华北"
+        },
+        {
+          "region": "华东"
+        },
+        {
+          "region": "华东"
+        }
+      ]
+    },
+    {
+      "title": "F",
+      "citylist": [
+        {
+          "region": "东北"
+        },
+        {
+          "region": "华东"
+        },
+        {
+          "region": "华南"
+        },
+        {
+          "region": "华中"
+        },
+        {
+          "region": "西北"
+        },
+        {
+          "region": "华南"
+        },
+        {
+          "region": "华中"
+        },
+        {
+          "region": "东北"
+        },
+        {
+          "region": "华南"
+        }
+      ]
+    },
+    {
+      "title": "G",
+      "citylist": [
+        {
+          "region": "华南"
+        },
+        {
+          "region": "华南"
+        },
+        {
+          "region": "西北"
+        },
+        {
+          "region": "东北"
+        },
+        {
+          "region": "华东"
+        },
+        {
+          "region": "华南"
+        }
+      ]
+    },
+    {
+      "title": "H",
+      "citylist": [
+        {
+          "region": "西北"
+        },
+        {
+          "region": "西南"
+        },
+        {
+          "region": "东北"
+        },
+        {
+          "region": "华中"
+        },
+        {
+          "region": "华东"
+        },
+        {
+          "region": "华东"
+        },
+        {
+          "region": "华北"
+        },
+        {
+          "region": "东北"
+        },
+        {
+          "region": "华中"
+        },
+        {
+          "region": "西南"
+        },
+        {
+          "region": "华中"
+        },
+        {
+          "region": "华南"
+        },
+        {
+          "region": "华南"
+        }
+      ]
+    },
+    {
+      "title": "J",
+      "citylist": [
+        {
+          "region": "西南"
+        },
+        {
+          "region": "华东"
+        },
+        {
+          "region": "华中"
+        },
+        {
+          "region": "华中"
+        },
+        {
+          "region": "华北"
+        },
+        {
+          "region": "华中"
+        },
+        {
+          "region": "华中"
+        },
+        {
+          "region": "西南"
+        },
+        {
+          "region": "西南"
+        },
+        {
+          "region": "华南"
+        },
+        {
+          "region": "华南"
+        }
+      ]
+    },
+    {
+      "title": "K",
+      "citylist": [
+        {
+          "region": "华中"
+        },
+        {
+          "region": "西南"
+        },
+        {
+          "region": "西北"
+        },
+        {
+          "region": "西南"
+        },
+        {
+          "region": "华东"
+        },
+        {
+          "region": "华中"
+        },
+        {
+          "region": "西南"
+        },
+        {
+          "region": "西南"
+        },
+        {
+          "region": "西南"
+        },
+        {
+          "region": "华中"
+        }
+      ]
+    },
+    {
+      "title": "L",
+      "citylist": [
+        {
+          "region": "西南"
+        },
+        {
+          "region": "西北"
+        },
+        {
+          "region": "西北"
+        },
+        {
+          "region": "华中"
+        },
+        {
+          "region": "华东"
+        },
+        {
+          "region": "华北"
+        },
+        {
+          "region": "西北"
+        },
+        {
+          "region": "华中"
+        },
+        {
+          "region": "华东"
+        },
+        {
+          "region": "华北"
+        }
+      ]
+    }
+  ]
+}

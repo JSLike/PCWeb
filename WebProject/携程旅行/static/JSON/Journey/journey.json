@@ -1,0 +1,45 @@
+{
+  "nextstationa": [
+    {
+      "src":"./../../static/images/journey/img1.jpg",
+      "title":"超爆款路线",
+      "subtitle": "跟着玩就对了"
+    },
+    {
+      "src":"./../../static/images/journey/img2.jpg",
+      "title":"超爆款路线",
+      "subtitle": "跟着玩就对了"
+    },
+    {
+      "src":"./../../static/images/journey/img5.jpg",
+      "title":"超爆款路线",
+      "subtitle": "跟着玩就对了"
+    }
+  ],
+  "nextstationb":[
+    {
+      "title":"毕业季穷游",
+      "subtitle": "去这里定格青春"
+    },
+    {
+      "title":"玩转水上乐园",
+      "subtitle": "夏季就要玩水啊"
+    },
+    {
+      "title":"毕业季穷游",
+      "subtitle": "去这里定格青春"
+    },
+    {
+      "title":"玩转水上乐园",
+      "subtitle": "夏季就要玩水啊"
+    },
+    {
+      "title":"玩转水上乐园",
+      "subtitle": "去这里定格青春"
+    },
+    {
+      "title":"毕业季穷游",
+      "subtitle": "夏季就要玩水啊"
+    }
+  ]
+}

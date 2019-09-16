@@ -1,0 +1,25 @@
+{
+    "title": "出行清单",
+    "cont": [
+      {
+        "src": "../../../../static/images/help/helpimg9.jpg",
+        "subtit": "旅行指南",
+        "msg": "轻松解决旅行难题"
+      },
+      {
+        "src": "../../../../static/images/help/helpimg10.jpg",
+        "subtit": "航班发生延误处理",
+        "msg": "飞机延误退改指南"
+      },
+      {
+        "src": "../../../../static/images/help/helpimg11.jpg",
+        "subtit": "锁定飞机好位置",
+        "msg": "在线选座快人一步"
+      },
+      {
+        "src": "../../../../static/images/help/helpimg12.jpg",
+        "subtit": "同行驴友互助交流",
+        "msg": "全称实时贴心互助"
+      }
+    ]
+}

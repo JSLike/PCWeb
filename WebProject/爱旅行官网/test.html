@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>封装一个双重选项卡</title>
+    <link rel="stylesheet" href="css/rest.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jQuery-3.4.1.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/vue_v2.6.10.js"></script>
+    <style>
+        .red{
+            border: 1px solid red;
+        }
+        .blue{
+            border: 1px solid blue;
+        }
+        .yellow{
+            border: 1px solid yellow;
+        }
+        .active{
+            background: #986b0d;
+        }
+        h1{
+            background: #986b0d;
+        }
+        h2{
+            background: #7CFC00;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <tab>
+            <template v-slot:cont-news>
+                <h1>h111111111111111111111111</h1>
+            </template>
+        </tab>
+    </div>
+
+    <div id="tab">
+        <tab>
+            <template v-slot:cont-news>
+                <h2>h111111111111111111111111</h2>
+            </template>
+        </tab>
+    </div>
+
+
+    <template id="tabTmp">
+        <div class="tab">
+            <ul class="red">
+                <li :key="index" v-for="(item,index) in news" :class="{active: index===iNow}" @click="iNow=index">{{item.title}}</li>
+            </ul>
+
+            <div :key="index" v-for="(item,index) in news" :style="{display: index === iNow ? 'block': 'none'}">
+                <ul class="yellow">
+                    <li v-for="(x,y) in item.listsub" :class="{active: y===jNow}" @click="jNow=y">{{x.title}}</li>
+                </ul>
+                <div v-for="(x,y) in item.listsub" class="blue" :style="{display: y === jNow ? 'block': 'none'}">
+                    <ul>
+                        <li v-for="(a,b) in x.content">
+                            <img :src="a.img" alt="">
+                            <div><slot name="cont-news">{{a.text}}</slot></div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </template>
+
+
+    <script>
+        let news;
+        $.ajax({
+            url:"json/datanews.json",
+            success:function (data) {
+//news.data1数据1
+// news.data1.length父级选项卡长度    //news.data1[0].title  父级选项卡标题
+//news.data1[0].listsub.length      子选项卡长度
+//news.data1[0].listsub[0].title    子选项卡标题
+//news.data1[0].listsub[0].content 内容数组
+//news.data1[0].listsub[0].content[0].img 单个内容img路径src
+//news.data1[0].listsub[0].content[0].text  单个内容文本内容
+                news=data;
+                console.log(news.data1);
+
+
+tab1("#app",news.data1);
+tab1("#tab",news.data1);
+//创建fn 传递参数id，每次调用创建一个新的vue
+                function tab1(id,datanum){
+                    new Vue({
+                        el: id,
+                        components: {
+                            'tab':{
+                                data () {
+                                    return {
+                                        jNow:0,
+                                        iNow: 0,
+                                        news:datanum,
+                                    }
+                                },
+                                template: `#tabTmp`
+                            }
+                        }
+                    })
+                }
+            }
+        });
+
+
+
+
+
+    </script>
+
+</body>
+</html>

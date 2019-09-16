@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/rest.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/dateTime.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jQuery-3.4.1.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/vue_v2.6.10.js"></script>
+    <script src="js/dateTime.min.js"></script>
+</head>
+<body>
+
+<!--头部导航-->
+<header class="header">
+    <div class="bg-title">
+        <div class="auto-width">
+            <img src="images/icon/i-LOGO-01.png" alt="" class="logo-travel">
+            <ul class="tit-header">
+                <li><a href="javascript:;">客服中心</a></li>
+                <li>24小时热线：400-xxx-6666</li>
+                <li class="icon-li">
+                    <span class="fa fa-mobile fa-2x">
+                        <img src="images/icon/i_wechat_11.jpg" alt="">
+                    </span>
+                    <span class="fa fa-weixin fa-lg">
+                        <img src="images/icon/i_wechat_11.jpg" alt="">
+                    </span>
+                </li>
+            </ul>
+       </div>
+    </div>
+<!--首页旅游导航栏-->
+    <div class="bg-nav">
+        <div class="auto-width">
+            <div class=" pagi-list">
+                <a href="javascript:;" class=""><span class="fa fa-home fa-lg"></span>首页</a>
+                <a href="javascript:;"><span class="fa fa-globe fa-lg"></span>旅游</a>
+                <a href="javascript:;"><span class="fa fa-hospital-o fa-lg"></span>酒店</a>
+                <a href="javascript:;"><span class="fa fa-plane fa-lg"></span>机票</a>
+                <a href="javascript:;"><span class="fa fa-credit-card-alt fa-lg"></span>门票</a>
+                <a href="javascript:;"><span class="fa fa-book fa-lg"></span>攻略</a>
+            </div>
+
+            <div class="login">
+                <a href="login.html"><span class="fa fa-user"></span>登录</a>
+                <a href="register.html">注册</a>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<!--轮播图及搜索行程框-->
+<div class="header-swiper">
+
+    <!--轮播图-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/img/i_banner_01.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/img/i_banner_02.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/img/i_banner_03.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/img/i_banner_04.jpg" alt=""></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            autoplay:{
+                disableOnInteraction:false,
+            },
+            loop:true
+        });
+    </script>
+
+
+    <!--搜索行程-->
+    <div class="tab-car">
+        <div id="tab1">
+            <ul class="nav-list list-fa">
+                <li class="active">旅游</li>
+                <li>酒店</li>
+                <li>机票</li>
+                <li>门票</li>
+                <li>攻略</li>
+            </ul>
+
+            <div class="nav-cont cont-fa">
+                <div id="tab1-sub">
+                    <ul class="nav-list">
+                        <li>特卖会</li>
+                        <li>出境旅游</li>
+                        <li>国内旅游</li>
+                    </ul>
+                    <div class="nav-cont">
+                        <div>
+                            <p class="p-1"><span class="text-right">目的地</span><input type="text" placeholder="三亚"></p>
+                            <p class="p-2">
+                                <span class="text-right">入住时间</span><input type="text" placeholder="2016待定" id="date">
+                                <span class="text-right">退房时间</span><input type="text" id="datetime">
+                            </p>
+                            <p class="p-3">
+                               <span class="text-right">酒店级别</span>
+                                <select name="" id="">
+                                    <option value="不限" selected>不限</option>
+                                    <option value="一级">一级</option>
+                                    <option value="二级" >二级</option>
+                                    <option value="三级">三级</option>
+                                </select>
+                            </p>
+                            <p class="p-4">
+                                <span class="text-right">关键词</span><input type="text" placeholder="海岛">
+                            </p>
+                            <p class="p-5">
+                                <span class="link-list">
+                                    <a href="javascript:void(0)">温泉</a>、<a href="javascript:void(0)">亲子</a>、<a href="javascript:void(0)">自由行</a>、<a href="javascript:void(0)">名胜古迹</a>、<a href="javascript:void(0)">都市购物</a>
+                                </span>
+                            </p>
+
+                            <button class="btn-search">搜索行程></button>
+
+                        </div>
+
+                        <div>bb</div>
+                        <div>cc</div>
+                    </div>
+                </div>
+                <div>22</div>
+                <div>33</div>
+                <div>44</div>
+                <div>55</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--主体部分-->
+<div class="section">
+
+    <div id="cont-tab1" class="auto-width scrollgrouup">
+        <tab></tab>
+    </div>
+
+    <div id="cont-tab2" class="auto-width scrollgrouup">
+        <tab>
+            <template v-slot:cont-slot-sub>
+               <div>
+                   <h4>【海南】四季青元海景酒店</h4>
+                   <ul>
+                       <li>￥<span>686</span>起</li>
+                       <li>已售 256</li>
+                   </ul>
+               </div>
+            </template>
+
+            <template v-slot:cont-sub-last>
+                <div class="cont-sub-last">
+                    <img src="images/img/jd_bottom_xxx1130_11.jpg" alt="">
+                    <img src="images/img/jd_bottom_xxx1130.jpg" alt="">
+                </div>
+            </template>
+            <template v-slot:rightimg-slot>
+                <img src="images/img/ticket278518-xxx1201.jpg" alt="右侧大图" class="big-img">
+            </template>
+
+
+
+        </tab>
+    </div>
+
+    <div id="cont-tab3" class="auto-width scrollgrouup">
+        <tab>
+            <template #cont-slot-fa>
+                <div class="cont-p">
+                    <h3>北京<span class="icon"></span>纽约</h3>
+                    <p>11月30日 - 12月07日</p>
+                    <p>仅剩264席</p>
+                    <p>￥<span>266</span>起</p>
+                </div>
+            </template>
+        </tab>
+    </div>
+
+
+    <div id="cont-tab4" class="auto-width scrollgrouup">
+        <tab>
+            <template v-slot:list-sub-slot>
+<!--去除副选项卡，默认显示第一张-->
+                <div></div>
+            </template>
+            <template v-slot:cont-sub-last>
+                <div class="cont-sub-last">
+                    <img src="images/img/jd_bottom_xxx1130_11.jpg" alt="">
+                    <img src="images/img/jd_bottom_xxx1130.jpg" alt="">
+                </div>
+            </template>
+            <template v-slot:rightimg-slot>
+                <div>
+                    <div class="cont-1">
+                        <h3>热门城市</h3>
+                        <ul class="list-nav">
+                            <li v-for="n in 26"><a href="javascript:void(0)">西藏</a></li>
+                        </ul>
+                    </div>
+                    <div class="cont-1">
+                        <h3>热门景点</h3>
+                        <ul class="list-nav jd">
+                            <li v-for="n in 16"><a href="javascript:void(0)">马尔代夫</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </template>
+            <template v-slot:cont-slot-sub>
+                <div>
+                    <h4>西双版纳<span v-for="n in 4" class="fa fa-star"></span><span class="fa fa-star-half"></span></h4>
+                    <p><span>560人去过</span><span>934人想去</span></p>
+                </div>
+            </template>
+        </tab>
+    </div>
+</div>
+
+
+<template id="tabTmp">
+    <div class="tab">
+        <div class="header-div">
+            <ul class="list-fa">
+                <li :key="index" v-for="(item,index) in news" :class="{active: index===iNow}" @click="iNow=index">{{item.title}}</li>
+            </ul>
+            <a href="javascript:void(0)" class="more-link">更多优惠特卖</a>
+        </div>
+        <div class="cont-fa" :key="index" v-for="(item,index) in news" :style="{display: index === iNow ? 'block': 'none'}">
+           <slot name="list-sub-slot">
+            <ul class="list-sub">
+                <li v-for="(x,y) in item.listsub" :class="{active: y===jNow}" @click="jNow=y">{{x.title}}</li>
+            </ul>
+           </slot>
+            <div class="cont-sub" v-for="(x,y) in item.listsub" :style="{display: y === jNow ? 'flex': 'none'}">
+                <ul class="cont-ul">
+                    <li v-for="(a,b) in x.content">
+                        <a href="javascript:void(0)">
+                            <slot name="cont-slot-fa">
+                                <img :src="a.img" alt="" class="cont-img">
+                                <div class="cont-p">
+                                    <slot name="cont-slot-sub">
+                                        {{a.text}}
+                                    </slot>
+                                </div>    <!--此处应添加插槽-->
+                            </slot>
+                        </a>
+                    </li>
+                </ul>
+                <div class="big-img-box">
+                    <slot name="rightimg-slot">
+                        <img src="images/img/sale-t1129.jpg" alt="右侧大图" class="big-img">
+                    </slot>
+                </div>
+                <slot name="cont-sub-last"></slot>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</template>
+
+<!--脚部-->
+<footer>
+    <div class="swiper-box" >
+
+
+        <!-- Swiper -->
+        <div class="swiper-container auto-width">
+            <h3><span>旅游局合作</span><a href="javascript:;">更多旅游局合作></a></h3>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/img/swiper-logo.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/img/swiper-logo.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/img/swiper-logo.jpg" alt=""></div>
+
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.swiper-box .swiper-container', {
+                direction: 'vertical',
+                autoplay: {
+                    disableOnInteraction: false,
+                },
+                loop:true,
+            });
+        </script>
+
+
+    </div>
+    <div class="load">
+        <div class="load_box">
+            <div class="load_logo">
+                <div class="load_h">
+                    <h3>下载<img src="images/icon/i-LOGO-01.png" style="width: 120px;height:60px">手机客户端</h3>
+                    <div class="load_p">
+                        <p>特价机票，一折酒店、出行安全保障、预约担保</p>
+                        <p>最佳旅游路线、吃喝玩乐一掌在手</p>
+                        <button>立刻下载</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="load_code">
+                <div class="load_bg">
+                    <img src="images/icon/i_APP_11.jpg" alt="">
+                    <p>微信公众平台</p>
+                </div>
+                <div class="load_bg">
+                    <img src="images/icon/i_APP_11.jpg" alt="">
+                    <p>App下载</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_cont">
+            <div class="footer_cont_head">
+                <div class="footer_cont_head_1" >
+                    <ul class="footer_cont_head_1_ul">
+                        <li>
+                            <span><img src="images/icon/i_serve_11.png" alt=""></span>
+                            <div class="footer_cont_head_1_ul_i">
+                                <p>贴心的服务</p>
+                                <p><a href="#">业内领先的服务标准</a><a href="#">用户保障系统</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><img src="images/icon/i_price_11.png" alt=""></span>
+                            <div class="footer_cont_head_1_ul_i">
+                                <p>优质的价格</p>
+                                <p><a href="#">优质竞争力的价格</a><a href="#">无任何隐形消费</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><img src="images/icon/i_num_11.png" alt=""></span>
+                            <div class="footer_cont_head_1_ul_i">
+                                <p>4008-xxx-6666</p>
+                                <p><a href="#">24小时客服热线</a><a href="#">无时无刻不在你身边</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_cont_head_2">
+                    <p>旅游咨询</p>
+                    <ul class="footer_cont_head_ul">
+                        <li><a href="#">宾馆索引</a><a href="#">攻略索引</a></li>
+                        <li><a href="#">机票索引</a><a href="#">网站导航</a></li>
+                        <li><a href="#">旅游索引</a><a href="#">火车票索引</a></li>
+                        <li><a href="#">游轮索引</a><a href="#">用车索引</a></li>
+                        <li><a href="#">企业差旅索引</a></li>
+                    </ul>
+                </div>
+                <div class="footer_cont_head_2">
+                    <p>加盟合作</p>
+                    <ul class="footer_cont_head_ul">
+                        <li><a href="#">宾馆索引</a><a href="#">攻略索引</a></li>
+                        <li><a href="#">机票索引</a><a href="#">网站导航</a></li>
+                        <li><a href="#">旅游索引</a><a href="#">火车票索引</a></li>
+                        <li><a href="#">游轮索引</a><a href="#">用车索引</a></li>
+                        <li><a href="#">企业差旅索引</a></li>
+                    </ul>
+                </div>
+                <div class="footer_cont_head_2">
+                    <p>关于我们</p>
+                    <ul class="footer_cont_head_ul">
+                        <li><a href="#">宾馆索引</a><a href="#">攻略索引</a></li>
+                        <li><a href="#">机票索引</a><a href="#">网站导航</a></li>
+                        <li><a href="#">旅游索引</a><a href="#">火车票索引</a></li>
+                        <li><a href="#">游轮索引</a><a href="#">用车索引</a></li>
+                        <li><a href="#">企业差旅索引</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_cont_foot">
+                <p>Copytight.1999-2016, ctrip.com.  All rights reserved.    |  <span>ICP证：沪B2-200501xx</span></p>
+                <p><i><img src="images/icon/hui1126.png" alt=""></i> 沪公网络31010502000xx号</p>
+                <p>旅游违法行为举报电话12318   |   服务质量投诉电话962020  |  北京市旅游网站落实诚信建设主体责任承诺书</p>
+                <ul class="footer_cont_foot_ul">
+                    <li><img src="images/icon/icon1126_11.jpg" alt=""></li>
+                    <li><img src="images/icon/icon1126_13.jpg" alt=""></li>
+                    <li><img src="images/icon/icon1126_15.jpg" alt=""></li>
+                    <li><img src="images/icon/icon1126_17.jpg" alt=""></li>
+                    <li><img src="images/icon/icon1126_19.jpg" alt=""></li>
+                    <li><img src="images/icon/icon1126_21.jpg" alt=""></li>
+                    <li><img src="images/icon/icon1126_23.jpg" alt=""></li>
+                    <li><img src="images/icon/icon1126_25.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!--固定窗口滚动监听-->
+<ul id="fixbox">
+    <li>i旅行</li>
+    <li><a href="#cont-tab1"><span class="text">特卖会</span><span class="fa fa-globe"></span></a></li>
+    <li><a href="#cont-tab2"><span class="text">酒店</span><span class="fa fa-hospital-o"></span></a></li>
+    <li><a href="#cont-tab3"><span class="text">机票</span><span class="fa fa-plane"></span></a></li>
+    <li><a href="#cont-tab4"><span class="text">攻略</span><span class="fa fa-book"></span></a></li>
+</ul>
+
+
+<script src="js/index.js"></script>
+<script>
+
+
+
+</script>
+
+
+</body>
+</html>

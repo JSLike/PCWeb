@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/rest.css">
+    <link rel="stylesheet" href="css/register.css">
+    <script src="js/vue_v2.6.10.js"></script>
+    <script src="js/vue-route.js"></script>
+    <script src="js/jQuery-3.4.1.js"></script>
+    <script src="js/verJs.js"></script>
+</head>
+<body>
+
+
+    <header class="bodywidth">
+        <h1><img src="images/img/i-LOGO-02-01.png" alt=""></h1>
+    </header>
+    
+    <section class="bodywidth">
+
+            <form action="" id="box"><!--vue框架内单选原点效果失效？？？ v-model特性？-->
+
+              <p>
+                  <span></span>
+                  <label for="pho-reg" class="tab"><input type="radio" id="pho-reg" name="registerRadio">手机注册</label>
+                  <label for="ema-reg" class="tab"><input type="radio" id="ema-reg" name="registerRadio">邮箱注册</label>
+              </p>
+                <!--手机模板-->
+                <div class="rei-tab">
+                    <p><span>国家</span><input type="text" placeholder="中国 86" class="g-width g-height"></p>
+                    <p><span>手机号码</span><input type="tel" placeholder="请输入手机号码" data-required="手机号不能为空" class="g-width g-height" data-mobile="true"></p>
+                </div>
+                <!--邮箱模板-->
+                <div class="rei-tab">
+                    <p><span>注册邮箱</span><input type="email" placeholder="请输入注册邮箱" data-required="邮箱不能为空" data-email="true" class="g-width g-height"></p>
+                </div>
+
+                <div>
+                    <p><span>登陆密码</span><input type="text" placeholder="8-20位数字、字母和符号"  data-required="请输入登陆密码" class="g-width g-height"></p>
+                    <p class="e-codebox">
+                        <span>验证码</span><input type="text" placeholder="请输入验证码" class="g-height">
+                        <img src="images/verification_cod.jpg" alt="验证码" class="e-code">
+                        <a href="#">换一张</a>
+                    </p>
+                    <p>
+                        <span>激活码</span><input type="text" placeholder="请输入激活码" class="g-height">
+                        <button class="activate">获取激活码</button>
+                    </p>
+                    <p><span></span><input type="radio">我已阅读并同意遵守<a href="#">i旅行用户服务协议</a> </p>
+                    <p><span></span><button type="submit" class="sub-btn">同意协议并注册</button></p>
+                </div>
+            </form>
+
+    </section>
+
+
+    <footer class="bodywidth">
+        <div>
+            <p>Copyright©1999-2019. All rights reserved. | ICP证：沪B2-20050130</p>
+            <p><span class="i-con-hui"></span>沪公网备31010502002731号</p>
+            <p>违法和不良信息举报电话021-22500846丨上海市反电信网络诈骗中心联系电话962110丨上海市旅游网站落实诚信建设主体责任承诺书</p>
+            <p class="good-fri">
+                <img src="images/icon/icon1126_13.jpg" alt="">
+                <img src="images/icon/icon1126_11.jpg" alt="">
+                <img src="images/icon/icon1126_15.jpg" alt="">
+                <img src="images/icon/icon1126_17.jpg" alt="">
+                <img src="images/icon/icon1126_19.jpg" alt="">
+                <img src="images/icon/icon1126_21.jpg" alt="">
+                <img src="images/icon/icon1126_23.jpg" alt="">
+                <img src="images/icon/icon1126_25.jpg" alt="">
+                <img src="images/icon/icon1126_27.jpg" alt="">
+            </p>
+        </div>
+
+    </footer>
+
+    <script>
+
+//verJs插件部分
+        new VerJs({
+            form:"#box",
+            // success:function (d) {
+            //     alert(1)
+            // },
+            // fail:function (d) {
+            //     alert(2)
+            // }
+        });
+
+
+//选项卡切换
+let $radio=$("#box").find('input[name="registerRadio"]');
+let $cont=$("#box").find('.rei-tab');
+$radio.map(function (index, item) {
+    item.index=index;
+    console.log(item,index)
+});
+$radio.click(function () {
+    console.log(this);
+    let tIndex=this.index;
+    console.log(tIndex,$radio);
+    $cont.css("display","none").eq(tIndex).css("display","block")
+})
+
+
+    </script>
+
+
+
+</body>
+</html>

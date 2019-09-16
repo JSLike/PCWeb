@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/rest.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/jQuery-3.4.1.js"></script>
+    <script src="js/vue_v2.6.10.js"></script>
+</head>
+<body>
+
+<header class="bodywidth">
+    <h1><img src="images/img/i-LOGO-02-01.png" alt=""></h1>
+</header>
+<section class="bodywidth">
+<!--    图片变文字介绍-->
+    <div class="message-box">
+        <h2>
+            <p>
+                使用<span class="logo"></span>客户端
+            </p>
+            <p>
+                手机扫描安全登录
+            </p>
+        </h2>
+        <ul class="msg">
+            <li>1.打开手机i旅行客户端并登录i旅行</li>
+            <li>2.在i旅行登录页点击右上角扫码安全登录</li>
+            <li>3.使用i旅行客户端左上角扫描功能完成登录</li>
+        </ul>
+    </div>
+
+
+<!--    登录框-->
+    <div class="login-box">
+        <div class="header">
+            <h3>会员登陆<span><a href="register.html">立即注册</a>,享积分换礼、返现等专属优惠！</span></h3>
+        </div>
+        <div class="section-login">
+            <form action="" id="login-form">
+                <div class="login-rad">
+                    <input type="radio" id="login-nomal" name="rad" checked><label for="login-nomal">普通登录</label>
+                    <input type="radio" id="login-phone" name="rad"><label for="login-phone">手机动态密码登录</label>
+                </div>
+
+                <ul class="login-cont">
+                    <li class="li-1"><label class="fa fa-user" for="tex"></label><input type="text" placeholder="请输入注册手机/注册邮箱" id="tex"></li>
+                    <li class="li-1 pass-box"><label class="fa fa-lock" for="pas"></label><input type="password" id="pas"></li>
+                    <li class="verify">
+                        <div class="static">
+                            <input type="text" placeholder="请输入验证码" class="ve-v"><img src="images/img/yanzhengma.png" alt="验证码">
+                            <a href="#">换一张</a>
+                        </div>
+                        <div class="move">
+                            <p>
+                                <label class="fa fa-lock"></label><input type="text" placeholder="动态密码"  class="ve-v">
+                            </p>
+                            <a href="#" class="move-a">获取手机动态密码</a>
+                        </div>
+
+                    </li>
+                    <li class="li-2">
+                        <span><input type="radio" checked>30天自动登录</span><a href="#">忘记密码</a>
+                    </li>
+                    <li class="danger">
+                        <span class="fa fa-info-circle"></span>
+                        <p>这是警告文字框</p>
+                    </li>
+                    <li class="li-3">
+                        <button><span>登</span><span>陆</span></button>
+                    </li>
+                </ul>
+                <div class="icon-more">
+                    <p>您也可以用合作网站的站好登录去i旅行网</p>
+                    <div class="friend">
+                        <a href="#"><img src="images/icon/baidu.jpg" alt=""></a>
+                        <a href="#"><img src="images/icon/weixin.jpg" alt=""></a>
+                        <a href="#"><img src="images/icon/xinlang.jpg" alt=""></a>
+                        <a href="#"><img src="images/icon/qq.jpg" alt=""></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="footer"></div>
+        
+        
+        
+        <span class="i-code"></span>
+        <div class="section-code">
+            <div class="code-box">
+                <h3>手机扫码安全登录</h3>
+                <img src="../images/img/erweima_1126.jpg" alt="" class="ing-code">
+                <h4>下载i旅行APP，开启完美之旅</h4>
+                <p>您还没有i旅行账号，<a href="register.html">免费注册</a></p>
+            </div>
+            <div class="trans-box">
+                <img src="../images/img/phone-erwema.png" alt="" class="pho">
+                <img src="../images/img/richScan.png" alt="" class="i">
+            </div>
+        </div>
+    </div>
+
+</section>
+<footer class="bodywidth">
+    <div>
+        <p>Copyright©1999-2019. All rights reserved. | ICP证：沪B2-20050130</p>
+        <p><span class="i-con-hui"></span>沪公网备31010502002731号</p>
+        <p>违法和不良信息举报电话021-22500846丨上海市反电信网络诈骗中心联系电话962110丨上海市旅游网站落实诚信建设主体责任承诺书</p>
+        <p class="good-fri">
+            <img src="images/icon/icon1126_13.jpg" alt="">
+            <img src="images/icon/icon1126_11.jpg" alt="">
+            <img src="images/icon/icon1126_15.jpg" alt="">
+            <img src="images/icon/icon1126_17.jpg" alt="">
+            <img src="images/icon/icon1126_19.jpg" alt="">
+            <img src="images/icon/icon1126_21.jpg" alt="">
+            <img src="images/icon/icon1126_23.jpg" alt="">
+            <img src="images/icon/icon1126_25.jpg" alt="">
+            <img src="images/icon/icon1126_27.jpg" alt="">
+        </p>
+    </div>
+
+</footer>
+
+
+<script src="js/login.js"></script>
+</body>
+</html>
